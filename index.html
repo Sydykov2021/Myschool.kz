@@ -201,6 +201,24 @@ mysqli_select_db($db,"chat");
 $_SESSION['login'] = 'admin';
 $_SESSION['password'] = 'admin';
 $_SESSION['id'] = 1;
+function auth($db,$login,$pass) {
+	//Находим совпадение в базе данных
+	$result = mysqli_query($db,"SELECT * FROM userlist WHERE login='$login' AND password='$pass'");
+	if($result) {
+		if(mysqli_num_rows($result) == 1) {//Проверяем, одно ли совпадение
+			$user = mysqli_fetch_array($result); //Получаем данные пользователя и заносим их в сессию
+			$_SESSION['login'] = $login;
+			$_SESSION['password'] = $pass;
+			$_SESSION['id'] = $user['id'];
+			return true; //Возвращаем true, потому что авторизация успешна
+		} else {
+			unset($_SESSION); //Удаляем все данные из сессии и возвращаем false, если совпадений нет или их больше 1
+			return false;
+		}
+	} else {
+		return false; //Возвращаем ложь, если произошла ошибка
+	}
+}
 </script>
       
       
