@@ -219,6 +219,15 @@ function auth($db,$login,$pass) {
 		return false; //Возвращаем ложь, если произошла ошибка
 	}
 }
+function send($db,$message) {
+	if(auth($db,$_SESSION['login'],$_SESSION['password'])) {//Если авторизация удачна
+		$message = htmlspecialchars($message);//Заменяем символы ‘<’ и ‘>’на ASCII-код
+		$message = trim($message); //Удаляем лишние пробелы
+		$message = addslashes($message); //Экранируем запрещенные символы
+		$result = mysqli_query($db,"INSERT INTO messages (user_id,message) VALUES ('$_SESSION[id]','$message')");//Заносим сообщение в базу данных
+	}
+	return load($db); //Вызываем функцию загрузки сообщений
+}
 </script>
       
       
