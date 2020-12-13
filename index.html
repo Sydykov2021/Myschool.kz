@@ -194,6 +194,13 @@ interval = setInterval(update,500);
 	send_request('send');
 	return false; //Возвращаем ложь, чтобы остановить классическую отправку формы
 };
+session_start();//Подключение должно быть на первой строчке в коде, иначе появится ошибка
+$db = mysqli_connect("localhost","login","password"); 
+mysqli_select_db($db,"chat");
+//Заносим данные админа в сессию
+$_SESSION['login'] = 'admin';
+$_SESSION['password'] = 'admin';
+$_SESSION['id'] = 1;
 </script>
       
       
