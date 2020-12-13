@@ -228,6 +228,31 @@ function send($db,$message) {
 	}
 	return load($db); //Вызываем функцию загрузки сообщений
 }
+if(isset($_POST['act'])) {$act = $_POST['act'];}
+if(isset($_POST['var1'])) {$var1 = $_POST['var1'];}
+if(isset($_POST['var2'])) {$var2 = $_POST['var2'];}
+
+switch($_POST['act']) {//В зависимости от значения act вызываем разные функции
+	case 'load': 
+		$echo = load($db); //Загружаем сообщения
+	break;
+	
+	case 'send': 
+		if(isset($var1)) {
+			$echo = send($db,$var1); //Отправляем сообщение
+		}
+	break;
+	
+	case 'auth': 
+		if(isset($var1) && isset($var2)) {//Авторизуемся
+			if(auth($db,$var1,$var2)) {
+				$echo = load($db);
+			}
+		}
+	break;
+}
+
+echo $echo;//Выводим результат 
 </script>
       
       
