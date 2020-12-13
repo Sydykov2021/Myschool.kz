@@ -186,6 +186,10 @@ var messageInput = document.getElementById('message-text'); //Инпут для 
 			messageInput.value = '';
 		}
 	});       
+        function update() {
+	send_request('load');
+}
+interval = setInterval(update,500);
 </script>
       
       
