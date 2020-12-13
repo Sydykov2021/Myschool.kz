@@ -190,6 +190,10 @@ var messageInput = document.getElementById('message-text'); //Инпут для 
 	send_request('load');
 }
 interval = setInterval(update,500);
+	sendForm.onsubmit = function () {
+	send_request('send');
+	return false; //Возвращаем ложь, чтобы остановить классическую отправку формы
+};
 </script>
       
       
