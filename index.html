@@ -54,6 +54,7 @@
     text-align: center;
     background-color:#9e7bed;
 }
+
 </style>
 <body>
 <div class="head">
@@ -77,6 +78,18 @@
    
     <div class="content">
     <h1>Контент центр</h1>
+        <div class='chat'>
+	<div class='chat-messages'>
+		<div class='chat-messages__content' id='messages'>
+			Загрузка...
+		</div>
+	</div>
+	<div class='chat-input'>
+		<form method='post' id='chat-form'>
+			<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
+		</form>
+	</div>
+</div>
     * По любым вопросам обращайтесь support@comet-server.ru или на сайт comet-server.ru
     */
   
