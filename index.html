@@ -3,6 +3,20 @@
     <title>MySchool</title>
 </head>
 <style>
+.row:after {
+    visibility: hidden;
+    display: block;
+    font-size:9;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+  .row { display: inline-block; }
+  * html .row { height: 1%; }
+  .row { display: block; }
+* {
+     box-sizing: border-box;
+     }
     .four {
   background:grey;
   padding: 50px 20px;
@@ -395,6 +409,8 @@ dolor sit amet, consectetur amet, consectetur<br>
 	consectetur dolor sit amet, consectetur <br>
 	ipsum dolor sit amet, consectetur  </h3>
 </div>
+<div class="container row">
 <div class="sidebar"></div>
 <div class="sidebar2"></div>
+</div>
 </body>
