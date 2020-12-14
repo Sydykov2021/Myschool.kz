@@ -39,3 +39,15 @@
   <input type="text" name="message" id="message" />
   <input type="button" value="Отправить" onclick="send()" />
 </p>
+<script type="text/javascript">
+  function send() {
+    var message = document.getElementById("message").value;
+    var name = "Гость";
+    /* Здесь блок отправки POST-запроса с данными (например, через Ajax) */
+  }
+  function update() {
+    /* Здесь отправка запроса на получение всех сообщений (например, через Ajax) */
+    /* Здесь вывод сообщений в определённом формате прямо в HTML-код с использованием DOM, либо JQuery. */
+  }
+  setInterval("update()", 1000); // Обновление окна чата каждую секунду
+</script>
