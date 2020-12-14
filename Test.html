@@ -2,6 +2,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+Сначала сам скрипт
+
+
+<script type="text/javascript">
+$(function() {
+$("#send").click(function(){
+var author = $("#author").val();
+var message = $("#message").val();
+var stranica = $("#stranica").val();
+$.ajax({
+type: "POST",
+url: "sendMessage.php",
+data: {"author": author, "message": message, "stranica": stranica},
+cache: false,
+success: function(response){
+var messageResp = new Array();
+var resultStat = messageResp[Number(response)];
+if(response == 0){
+$("#author").val("");
+$("#message").val("");
+$("#commentBlock").append("<div class='comment'><strong>"+author+"</strong><br>"+message+"</div>");
+}$("#resp").text(resultStat).show().delay(1500).fadeOut(800);}});return false;});});
+</script>
 <title>Chat - Customer Module</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
