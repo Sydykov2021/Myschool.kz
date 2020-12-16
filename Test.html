@@ -7,6 +7,61 @@
 
 </head>
 <style>
+  .horizont {
+margin-bottom: 100px;
+}
+
+input[type=checkbox] {
+visibility: hidden;
+}
+
+.click {
+width: 85px;
+height: 35px;
+position: relative;
+display: block;
+left: 0;
+top: 0;
+background: #E6E6E6;
+z-index: 50;
+font: bold 12px Arial;
+cursor: pointer;
+margin: 0 auto;
+}
+
+.click:before {
+content: ‘OFF’;
+position: absolute;
+color: #F00;
+top: 10px;
+left: 64%;
+}
+
+.click:after {
+content: »;
+display: block;
+width: 30px;
+height: 45px;
+-webkit-transition: all .5s ease;
+-moz-transition: all .5s ease;
+-o-transition: all .5s ease;
+-ms-transition: all .5s ease;
+transition: all .5s ease;
+position: absolute;
+top: -5px;
+left: 10px;
+background: rgb(72, 136, 252);
+}
+
+input[type=checkbox]:checked + label::before {
+content: ‘ON’;
+left: 11%;
+color: #0C0;
+}
+
+input[type=checkbox]:checked + label:after {
+left: 45px;
+}
   table {
   font-family:Roboto, sans-serif;
   font-size:18px;
