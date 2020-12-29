@@ -380,12 +380,14 @@ background-color:grey;
       
 	    </div>
             </div> 
+	    
 	     <div>
 	<a href="gallery.html"><span>Галерея</span></a>
       <div>
       
 	    </div>
             </div> 
+	     <p>До нового года осталось <span id="t" style="font-size:20px"></span></p>
         </div>
 	
              </nav>
@@ -409,7 +411,26 @@ background-color:grey;
 <h3>По итогам турнира 1 место занял ученик 6 «А» класса  Сержанович Назар, 2 место занял ученик 4 «А» класса  Болат Арафат, 3 место занял ученик 5 класса Кабдрахман Адиль Арманович. Игра проводилась автоматически, а победитель определялся онлайн на сайте <a href="http://linchess.org/">lichess.org</a>.Планируем и реализуем соревнования по логическим играм. В будущем шахматы, шашки и т. Д. </h3>
 <img src="WhatsApp Image 2020-12-28 at 05.43.06 (1).jpeg" width="500px" height="300px" alt="error, bad internet connection">
 </div>
-
+<script type="text/javascript">
+timeend= new Date();
+// IE и FF по разному отрабатывают getYear()
+timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
+// для задания обратного отсчета до определенной даты укажите дату в формате:
+// timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+// Для задания даты с точностью до времени укажите дату в формате:
+// timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+function time() {
+  today = new Date();
+  today = Math.floor((timeend-today)/1000);
+  tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+  tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+  thour=today%24; today=Math.floor(today/24);
+  timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+  document.getElementById('t').innerHTML=timestr;
+  window.setTimeout("time()",1000);
+}
+</script>
+<body onload="time()">
 
 </div>
 </body>
