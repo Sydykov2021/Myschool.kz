@@ -383,6 +383,157 @@ span.sim-dot {
   border-radius: 5px;
   cursor: pointer;
 }
+#wrapper
+{
+	margin: 50px auto;
+	width: 673px;
+}
+#container
+{
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	height: 235px;
+	padding: 32px;
+	position: relative;
+}
+.sliderbutton
+{
+	cursor: pointer;
+	float: left;
+	height: 235px;
+	width: 25px;
+}
+#slideleft
+{
+	background: url(images/icons.gif) -50px -265px no-repeat;
+}
+#slideleft:hover
+{
+	background-position: -0 -265px;
+}
+#slideright
+{
+	background: url(images/icons.gif) 0 90px no-repeat;
+}
+#slideright:hover
+{
+	background-position: -50px 90px;
+}
+#slider
+{
+	float: left;
+	height: 235px;
+	overflow: auto;
+	position: relative;
+	width: 558px;
+}
+#slider ul
+{
+	left: 0;
+	list-style: none;
+	position: absolute;
+	top: 0;
+}
+#slider li
+{
+	float: left;
+	height: 235px;
+	width: 558px;
+}
+.pagination
+{
+	height: 25px;
+	list-style: none;
+	position: absolute;
+	right: 61px;
+	top: 40px;
+}
+.pagination li
+{
+	background: #ccc;
+	border: 1px solid #fff;
+	cursor: pointer;
+	float: left;
+	height: 8px;
+	margin: 0 4px 0 0;
+	width: 8px;
+}
+.pagination li:hover, li.current
+{
+	background: #fff;
+}
+.adaptivny-slayder {
+  position: relative;
+  max-width: 680px;
+  margin: 50px auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.adaptivny-slayder input[name="kadoves"] {
+  display: none;
+}
+
+.kadoves {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.kadoves label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+#slaid1:checked~.kadoves label[for="slaid1"] {
+  background-color: white;
+}
+
+#slaid2:checked~.kadoves label[for="slaid2"] {
+  background-color: white;
+}
+
+#slaid3:checked~.kadoves label[for="slaid3"] {
+  background-color: white;
+}
+
+.adaptivny-slayder-lasekun {
+  overflow: hidden;
+   
+}
+
+.abusteku-deagulus {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.abusteku-deagulus img {
+  width: 100%;
+  flex-shrink:0;
+}
+
+#slaid1:checked~adaptivny-slayder-lasekun abusteku-deagulus {
+  transform: translate(0);
+}
+
+#slaid2:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+#slaid3:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-200%);
+}
+
 </style>
 <body>
 <div class="head">
@@ -422,18 +573,26 @@ span.sim-dot {
 <div class="container row">
 <div class="inne">
 <h1>Галерея школы имени Ж.Сыдыкова</h1><br>
-<div class="sim-slider">
-     <ul class="sim-slider-list">
-         <li><img src="screen.gif" alt="screen"></li>    <!-- это экран -->
-         <li class="sim-slider-element"><img src="img1.jpeg" alt="1"></li>
-         <li class="sim-slider-element"><img src="img2.jpeg" alt="2"></li>
-	  …
-         <li class="sim-slider-element"><img src="imgN.jpeg" alt="N"></li>
-     </ul>
-     <div class="sim-slider-arrow-left"></div>
-     <div class="sim-slider-arrow-right"></div>
-     <div class="sim-slider-dots"></div>
- </div>
+<div class="adaptivny-slayder">
+  <input type="radio" name="kadoves" id="slaid1" checked>
+  <input type="radio" name="kadoves" id="slaid2">
+  <input type="radio" name="kadoves" id="slaid3">
+   
+  <div class="kadoves">
+  <label for="slaid1"></label>
+  <label for="slaid2"></label>
+  <label for="slaid3"></label>
+  </div>
+   
+  <div class="adaptivny-slayder-lasekun">
+  <div class="abusteku-deagulus">
+  <img src="img1.jpeg"/>
+  <img src="img2.jpeg"/>
+  <img src="imgN.jpeg"/>
+  </div>
+  </div>
+</div>
+
 </div>
 <script>
 function Sim(sldrId) {
