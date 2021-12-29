@@ -5,6 +5,16 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/70537438" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 	<link rel="shortcut icon" type="image/icon" href="favicon.ico"/>
+	<script type="text/javascript">  
+function garland() {  
+nums = document.getElementById('nums_1').innerHTML  
+if(nums == 1) {document.getElementById('garland').className='garland_1';document.getElementById('nums_1').innerHTML='2'}  
+if(nums == 2) {document.getElementById('garland').className='garland_2';document.getElementById('nums_1').innerHTML='3'}  
+if(nums == 3) {document.getElementById('garland').className='garland_3';document.getElementById('nums_1').innerHTML='4'}  
+if(nums == 4) {document.getElementById('garland').className='garland_4';document.getElementById('nums_1').innerHTML='1'}  
+}  
+setInterval(function(){garland()}, 300)  
+</script>
 	 <script type="text/javascript">
 var snowmax=35;
 var snowcolor=new Array("#AAAACC","#DDDDFF","#CCCCDD","#F3F3F3","#F0FFFF","#FFFFFF","#EFF5FF")
