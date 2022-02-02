@@ -554,7 +554,13 @@ margin-top:0px;
 
 <div class="elfsight-app-3b776811-8331-4d9f-b317-05ee108d244d"></div>
 		</div>
-
+	<script>
+	var sideBar1 = Document.getElementsByClass("sidebar")
+	var sideBar2 = Document.getElementsByClass("sidebar2")
+	var mineRow = Document.getElementsByClass("container row")
+	sideBar1.style.height = mineRow.style.height
+	sideBar2.style.height = mineRow.style.height
+	</script>
 <script>
 var app = new Vue({
   el: '.inne',
