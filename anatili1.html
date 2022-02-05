@@ -101,9 +101,9 @@ a.button18:focus:hover {
       background-color:#dbcdcc;
       }
       .desc{
-      width:50%;
+      width:40%;
       height:auto;
-      min-height:100px;
+      min-height:160px;
       background-color:#dbcdcc;
       margin-right:auto;
       border-radius:5px;
@@ -119,6 +119,36 @@ a.button18:focus:hover {
       min-height:80px;
       background-color:white;
       }
+      .animated-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30, 255, 188, 1);
+  background: rgba(255, 255, 255, 1);
+  transition: color .3s, background .5s;
+}
+.animated-button:hover {
+  animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 0;
+  }
+}
     </style>
     
     <body>
