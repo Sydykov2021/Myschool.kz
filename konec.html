@@ -1,0 +1,202 @@
+<DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Библиотека</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    
+    <style>
+      body{
+      background-image: url(depositphotos_3674237-stock-photo-books-shelf.jpg);
+      }
+      .main{
+      width:93%;
+      height:auto;
+      min-height:500px;
+      background-color:#ffe291;
+      border-radius:8px;
+      margin-left:auto;
+      margin-right:auto;
+      }
+      .sidebar{
+      float:left;
+      width:15%;
+      height:auto;
+      min-height:450px;
+      margin-right:5px;
+      baclground-color:green;
+      }
+      .sidebar two{
+      float:right;
+      margin-left:5px;
+      width:15%;
+      height:auto;
+      min-height:450px;
+      baclground-color:green;
+      }
+      .content{
+      margin-left:auto;
+      border-radius:8px;
+      margin-right:auto;
+      width:99%;
+      height:auto;
+      min-height:400px;
+      background-color:#fcdede;
+      }
+      .class{
+      height:auto;
+      min-height:80px;
+      width:95%;
+      background-color:#ded1d1;
+      margin-left:auto;
+      margin-right:auto;
+      }
+    a.button18 {
+  width:70px;
+  height:auto;
+  min-height:20px;
+  display: inline-block;
+  font-size: 12px;
+  color: rgb(205,216,228);
+  text-decoration: none;
+  padding: .2em .8em;
+  outline: none;
+  border-right: 1px solid rgba(13,20,27,.5);
+  border-top: 1px solid rgba(270,278,287,.01);
+  background-color: rgb(64,73,82);
+  background-image:
+   radial-gradient(1px 60% at 0% 50%, rgba(255,255,255,.3), transparent),
+   radial-gradient(1px 60% at 100% 50%, rgba(255,255,255,.3), transparent),
+   linear-gradient(rgb(64,73,82), rgb(72,81,90));
+}
+a.button18:hover {
+  background-image:
+   radial-gradient(1px 60% at 0% 50%, rgba(255,255,255,.3), transparent),
+   radial-gradient(1px 60% at 100% 50%, rgba(255,255,255,.3), transparent),
+   linear-gradient(rgb(51,60,67), rgb(58,65,72));
+}
+a.button18:focus {
+  color: rgb(245,247,250);
+  border-top: 1px solid rgb(67,111,136);
+  background-image:
+   linear-gradient(rgb(46,95,122), rgb(36,68,92));
+}
+a.button18:focus:hover {
+  border-top: 1px solid rgb(49,87,107);
+  background-image:
+   linear-gradient(rgb(33,77,98), rgb(29,57,77));
+}
+      .center{
+      margin-left:auto;
+      margin-right:auto;
+      width:87%;
+      height:auto;
+      min-height:20px;
+      }
+      .newbooks{
+      width:95%;
+      margin-top:8px;
+      border-radius:8px;
+      height:auto;
+      min-height:200px;
+      margin-right:auto;
+      margin-left:auto;
+      background-color:#dbcdcc;
+      }
+      .desc{
+      width:40%;
+      height:auto;
+      min-height:160px;
+      background-color:#dbcdcc;
+      margin-right:auto;
+      border-radius:5px;
+      margin-left:auto;
+      }
+      .description{
+      width:50%;
+      margin-top:8px;
+      margin-right:auto;
+      margin-left:auto;
+      border-radius:8px;
+      height:auto;
+      text-align:center;
+      min-height:80px;
+      background-color:white;
+      }
+      .animated-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align:center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30, 255, 188, 1);
+  background: rgba(255, 255, 255, 1);
+  transition: color .3s, background .5s;
+}
+.animated-button:hover {
+  animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 0;
+  }
+}
+    .im{
+    margin-left:auto;
+    text-align:center;
+    margin-right:auto;
+    }
+     .header{
+    text-align:center;
+    width:100%;
+    min-height:100px;
+    height:auto;
+    font-weight:bold;
+    font-size:20px;
+    color:white;
+    padding-top:13px;
+    background-image: url(depositphotos_3674237-stock-photo-books-shelf.jpg);
+    }
+
+    </style>
+    
+    <body>
+         <div class="header">
+          <h1>Online Library</h1>
+      </div>
+      <div class="main">
+        <h1 style="text-align:center;">Библиотека</h1>
+        
+          <div class="im">
+          <a href=#><img src="0.jfif" width="230" height="230"></a>
+        </div>
+        <div class="description">
+          <h1 style="text-align:center;">Описание</h1>
+          <h3 style="text-align:center;">Учебник Русского языка 2 часть для 1 класса</h3>
+          <a href="Kekilbaev_Abish__Konec_legendy__Litmir.net_132651.fb2" class="animated-button" download="" style="margin-left:auto; margin-right:auto;">Скачать</a>
+        </div>
+        </div>
+      
+      <script>
+    var app = new Vue({
+      el: '.app',
+      data: {
+        message: 'Привет, Vue!'
+      }
+    })
+      </script>
+    </body>
+  </html>
