@@ -14,13 +14,25 @@ body {
     padding: 0;
 }
 
+.language-block {
+    position: relative;
+}
+
 .language-sites {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            color:white;
-            background-color: #000;
-        }
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color:white;
+    background-color: #000;
+}
+
+.language-russian {
+    top: 30px;
+}
+
+.language-english {
+    top: 30px;
+}
 
 hr {
     /* Prettify Line delimiter */
