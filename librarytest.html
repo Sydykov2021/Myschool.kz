@@ -51,6 +51,13 @@
       
       <hr>
       <h2 style="text-align:center;">Мировая литература</h2>
+      <select v-model="selected">
+  <option disabled value="">Выберите один из вариантов</option>
+  <option>А</option>
+  <option>Б</option>
+  <option>В</option>
+</select>
+<span>Выбрано: {{ selected }}</span>
       <a href=ruslaniludmila.html><img class="books-images" src="5043.jpg" width="130px" height="110px"></a>
       <a href=shekspirgamlet.html><img class="books-images" src="gamlet-126347-237x356.jpg" width="130px" height="110px"></a>
       <a href=svetochaga.html><img class="books-images" src="b314544_0.jpeg" width="130px" height="110px"></a>
@@ -60,6 +67,12 @@
     </div>
 
     <script>
+      new Vue({
+  el: '...',
+  data: {
+    selected: ''
+  }
+})
       var app = new Vue({
         el: '.app',
         data: {
