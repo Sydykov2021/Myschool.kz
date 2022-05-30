@@ -5,12 +5,14 @@
   <title>Библиотека</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <link rel="stylesheet" href="library.css">
+  <!-- For Responsible Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<div id="library-background-color">
-  <!-- Dark Effect on background image -->
-</div>
 <body>
+  <div id="library-background-color">
+    <!-- Dark Effect on background image -->
+  </div>
   <div class="header">
     <!-- Remember: set reletive position on the block, absolute on the child  -->
     <div class="language-block">
@@ -26,38 +28,48 @@
 
     </div>
 
-    <h1 id="library-title">Online Library</h1>
+    <h1 id="library-title">Онлайн Библиотека</h1>
     <div class="main">
       <div class="center">
-         <marquee behavior="alternate" direction="right" bgcolor="#8afff5">
+         <marquee behavior="alternate" direction="right">
     Добавлена новая книга в раздел "Мировая Литература"
   </marquee>
          <form>
-             <p><input type="search" name="q" placeholder="Поиск по сайту"> 
+            <p><input type="search" name="q" placeholder="Поиск по сайту">
              <input type="submit" value="Найти"></p>
          </form>
-        <a href="1class.html" class="button18" tabindex="0">1 класс</a>
-        <a href="#" class="button18" tabindex="0">2 класс</a>
-        <a href="#" class="button18" tabindex="0">3 класс</a><br>
-        <a href="#" class="button18" tabindex="0">4 класс</a>
-        <a href="#" class="button18" tabindex="0">5 класс</a>
-        <a href="#" class="button18" tabindex="0">6 класс</a><br>
-        <a href="#" class="button18" tabindex="0">7 класс</a>
-        <a href="#" class="button18" tabindex="0">8 класс</a>
-        <a href="#" class="button18" tabindex="0">9 класс</a><br>
-        <a href="#" class="button18" tabindex="0">10 класс</a>
-        <a href="#" class="button18" tabindex="0">11 класс</a>
-        <a href="#" class="button18" tabindex="0">Мировая Литература</a>
+        <div class="flexbox-container">
+          <a href="1class.html" class="button18 button18--short" tabindex="0">1 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">2 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">3 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">4 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">5 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">6 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">7 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">8 класс</a>
+          <a href="#" class="button18 button18--short" tabindex="0">9 класс</a>
+          <a href="#" class="button18 button18--mid" tabindex="0">10 класс</a>
+          <a href="#" class="button18 button18--mid" tabindex="0">11 класс</a>
+          <a href="#worldLiterature" class="button18 button18--long" tabindex="0">Мировая Литература</a>
+        </div>
       </div>
       
       <hr>
-      <h2 style="text-align:center;">Мировая литература</h2>
-      <a href=ruslaniludmila.html><img class="books-images" src="5043.jpg" width="130px" height="110px"></a>
-      <a href=shekspirgamlet.html><img class="books-images" src="gamlet-126347-237x356.jpg" width="130px" height="110px"></a>
-      <a href=svetochaga.html><img class="books-images" src="b314544_0.jpeg" width="130px" height="110px"></a>
-      <a href=ternystii.html><img class="books-images" src="d807a9978b05631b8bcadeaabd963c6d.png" width="130px" height="110px"></a>
-      <a href=malchik.html><img class="books-images" src="566444.jpeg" width="130px" height="110px"></a>
-       <a href=konec.html><img class="books-images" src="0.jfif" width="130px" height="110px"></a>
+      <section id="worldLiterature">
+        <h2 class="worldLiterature--header">Мировая литература</h2>
+        <div class="flexbox-container world-literature">
+          <div>
+            <a href=ruslaniludmila.html><img class="books-images" src="5043.jpg" width="130px" height="110px"></a>
+            <a href=shekspirgamlet.html><img class="books-images" src="gamlet-126347-237x356.jpg" width="130px" height="110px"></a>
+            <a href=svetochaga.html><img class="books-images" src="b314544_0.jpeg" width="130px" height="110px"></a>
+          </div>
+          <div>
+            <a href=ternystii.html><img class="books-images" src="d807a9978b05631b8bcadeaabd963c6d.png" width="130px" height="110px"></a>
+            <a href=malchik.html><img class="books-images" src="566444.jpeg" width="130px" height="110px"></a>
+            <a href=konec.html><img class="books-images" src="0.jfif" width="130px" height="110px"></a>
+          </div>
+        </div>
+      </section>
     </div>
 
     <script>

@@ -22,8 +22,9 @@ body {
     position: absolute;
     top: 5px;
     right: 10px;
+}
+.language-sites a {
     color:white;
-    background-color: #000;
 }
 
 .language-russian {
@@ -45,6 +46,10 @@ hr {
     /* One Size books image */
     width: 97px;
     height: 142px;
+    /* 3d books :) */
+    border-radius: 5px;
+    box-shadow: 5px 7px rgb(58, 58, 58);
+    margin-right: 10px;
 }
 
 #library-title {
@@ -60,7 +65,8 @@ hr {
     background-attachment: fixed;
     filter: opacity(75%) blur(.25px);
     width: 100%;
-    height: 100%;
+    /* little hack here, dunno how else xD */
+    height: 110%;
     /* Get behind main content */
     z-index: -1;
 }
@@ -152,8 +158,14 @@ br d20 {
     margin-right: auto;
 }
 
+.flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 a.button18 {
-    width: 25%;
+    width: 15%;
     height: auto;
     min-height: 40px;
     display: inline-block;
@@ -163,6 +175,42 @@ a.button18 {
     padding: .2em .8em;
     outline: none;
 background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 9px;
+}
+
+#worldLiterature {
+    margin-bottom: 26px;
+}
+.worldLiterature--header {
+    text-align: center;
+}
+.world-literature {
+    justify-content: center;
+}
+
+/* For mobiles */
+@media only screen and (max-width: 700px) {
+
+    .main {
+        margin-bottom: 10px;
+    }
+    #library-background-color {
+        height: 120%;
+    }
+
+    .button18--short, .button18--mid {
+        flex: 20%;
+    }
+
+    .button18--long {
+        flex: 100%;
+    }
+    .books-images {
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
 }
 
 a.button18:hover {
